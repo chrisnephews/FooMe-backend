@@ -8,6 +8,7 @@ import javax.persistence.*;
  * Created by cknev on 15-1-2018.
  */
 
+
 @Entity
 public class Location {
     @Id
