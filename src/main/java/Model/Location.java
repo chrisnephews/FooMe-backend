@@ -1,5 +1,7 @@
 package Model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 
 /**
@@ -15,6 +17,7 @@ public class Location {
     private float longFloat;
     @OneToOne
     @PrimaryKeyJoinColumn
+    @JsonBackReference
     private Friend friend;
 
     public Friend getFriend() {
@@ -30,7 +33,10 @@ public class Location {
         this.longFloat = longFloat;
     }
 
-    public float getLatFloat() {
+    public Location() {
+    }
+
+    public double getLatFloat() {
         return latFloat;
     }
 
@@ -38,7 +44,7 @@ public class Location {
         this.latFloat = latFloat;
     }
 
-    public float getLongFloat() {
+    public double getLongFloat() {
         return longFloat;
     }
 

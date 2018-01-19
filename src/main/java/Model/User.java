@@ -1,16 +1,10 @@
 package Model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-import javax.persistence.*;
-
-/**
- * Created by cknev on 10-1-2018.
- */
-
-
-@Entity
-public class Friend {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,17 +14,14 @@ public class Friend {
 
     private String email;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JsonManagedReference
     private Location location;
 
-    public Friend(String name, String email, Location location) {
+    public User(String name, String email) {
         this.name = name;
         this.email = email;
-        this.location = location;
     }
 
-    public Friend() {
+    public User() {
     }
 
     public Integer getId() {
@@ -56,14 +47,4 @@ public class Friend {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-
-
 }

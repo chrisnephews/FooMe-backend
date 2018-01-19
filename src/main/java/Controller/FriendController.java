@@ -2,6 +2,7 @@ package Controller;
 
 import DAO.FriendDAO;
 import Model.Friend;
+import Model.Location;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,7 @@ public class FriendController {
         return "Saved";
     }
 
+
     @GetMapping(path = "/all")
     public @ResponseBody
     Iterable<Friend> getAllFriends() {
@@ -31,6 +33,8 @@ public class FriendController {
         return friendDAO.findAll();
 
     }
+
+
 
     @GetMapping(path = "/test")
     public @ResponseBody

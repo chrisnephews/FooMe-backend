@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface FriendDAO extends CrudRepository<Friend, Long>{
-
+    Friend findFirstByOrderByIdAsc();
 }
