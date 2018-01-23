@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * @author chrisneven
  * The FriendController class is responsible for handeling requests by using the DAO's for saving and the model for defining objects that are received.
- * from the frontend. The Controller is the bridge between mobile application and the DAO -> database.
+ * from the frontend. The Controller is the bridge between mobile application and the DAO - database.
  */
 
 @Controller
@@ -22,7 +22,7 @@ public class FriendController {
 
     /**
      * Method for capturing friend objects and giving it to the FriendDAO wich adds it to the db
-     * @param friend
+     * @param friend Object of the Friend class
      * @return A string in JSON format so the mobile application can handle it properly
      */
     @PostMapping(path = "/add") // POST request enabled

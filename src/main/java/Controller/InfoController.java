@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * @author chrisneven
  * The InfoController class is responsible for handeling requests by using the DAO's for saving and the model for defining objects that are received.
- * from the frontend. The Controller is the bridge between mobile application and the DAO -> database.
+ * from the frontend. The Controller is the bridge between mobile application and the DAO - database.
  */
 
 @Controller
@@ -24,7 +24,7 @@ public class InfoController {
 
     /**
      * Method for capturing CPUTemp objects and giving it to the InfoDAO wich adds it to the db
-     * @param cpuTemp
+     * @param cpuTemp Object of the CPUTemp model
      * @return A string in JSON format so the mobile application can handle it properly. This can be either a succesful one or an error.
      */
     @PostMapping(path = "/cputemp/add") // POST request enabled

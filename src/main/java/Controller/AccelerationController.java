@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * @author chrisneven
  * The AccelerationController class is responsible for handeling requests by using the DAO's for saving and the model for defining objects that are received.
- * from the frontend. The Controller is the bridge between mobile application and the DAO -> database.
+ * from the frontend. The Controller is the bridge between mobile application and the DAO - database.
  */
 @Controller
 @RequestMapping("/accelerations")
@@ -27,7 +27,7 @@ public class AccelerationController {
 
     /**
      * Method for capturing acceleration objects and giving it to the accelerationDAO
-     * @param acceleration
+     * @param acceleration Object of the Acceleration class
      * @return A string in JSON format so the mobile application can handle it properly
      */
     @PostMapping(path = "/add") // POST request enabled
